@@ -10,10 +10,10 @@ from typing import List, Dict
 import ntpath
 
 
-def image_slice_size(image_path, width_new_image: int,
-                     height_new_image: int,
-                     output_folder="sliced/",
-                     keep_end_sections=True):
+def bysize(image_path, width_new_image: int,
+           height_new_image: int,
+           output_folder="sliced/",
+           keep_end_sections=True):
 
     def __validation_check(input_value):
 
