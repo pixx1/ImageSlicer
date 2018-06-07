@@ -10,10 +10,19 @@ from typing import List, Dict
 import ntpath
 
 
-def bysize(image_path, width_new_image: int,
+def bysize(image_path: str, width_new_image: int,
            height_new_image: int,
-           output_folder="sliced/",
-           keep_end_sections=True):
+           output_folder: str ="sliced/",
+           keep_end_sections: bool =True) -> None:
+    """
+    function for slicing images into smaller pieces.
+    :param image_path: path to image file
+    :param width_new_image: width of the new images
+    :param height_new_image: height of the new images
+    :param output_folder: output path, by default it's the folder sliced....
+    :param keep_end_sections: the small end parts could be ignored, if you want, by default you keep them
+    :return: None
+    """
 
     def __validation_check(input_value):
 

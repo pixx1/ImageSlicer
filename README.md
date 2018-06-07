@@ -1,5 +1,5 @@
 # ImageSlicer
-A python module for image slicing.  
+function for slicing images into smaller pieces.
 
 Example
 ---
@@ -21,7 +21,7 @@ ImageSlicer.bysize("example.jpg", 2000, 2000, output_folder="slice_image", keep_
 2. width of the new images  
 3. height of the new images  
 4. output path (optional)  
-5. If you want to keep the end section, which are normaly smaller (optional)  
+5. If you want to keep the end section, which are normally smaller (optional)  
 
 ---
 Python 3.5+
