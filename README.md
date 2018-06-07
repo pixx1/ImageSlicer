@@ -4,7 +4,8 @@ A python module for image slicing.
 Example
 ---
 <img src="example.jpg" width="315" title="original image">  
-[main.py](main.py)
+
+[main.py](main.py)  
 ```python
 import ImageSlicer
 
