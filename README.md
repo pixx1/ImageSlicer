@@ -3,6 +3,7 @@ A python module for image slicing.
 
 Example
 ---
+<img src="example.jpg" width="315" title="original image">  
 [main.py](main.py)
 ```python
 import ImageSlicer
@@ -10,7 +11,7 @@ import ImageSlicer
 ImageSlicer.image_slice_size("example.jpg", 2000, 2000, output_folder="slice_image", keep_end_sections=True)
 ```
 
-<img src="example.jpg" width="315" title="original image">  
+
   
 <img src="slice_image/0001_example.jpg" width="200" height="200"> <img src="slice_image/0002_example.jpg" width="115" height="200">  
 <img src="slice_image/0003_example.jpg" width="200" height="37"> <img src="slice_image/0004_example.jpg" width="115" height="37">  
