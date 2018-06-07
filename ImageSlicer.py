@@ -1,5 +1,6 @@
 """
 Author: Jonas Schober
+License GNU General Public License v3.0
 """
 
 import os
@@ -88,9 +89,12 @@ def image_slice_size(image_path, width_new_image: int,
 
             original_file_name = ntpath.basename(image_path)
 
-            new_file_name = "{0}{2}_{1}".format(str(output_path),
-                                                str(original_file_name),
-                                                "{0:0{width}}".format(counter, width=4))
+            if not os.path.isdir(output_path):
+                os.makedirs(output_path)
+
+            new_file_name = "{0}/{2}_{1}".format(str(output_path),
+                                                 str(original_file_name),
+                                                 "{0:0{width}}".format(counter, width=4))
             counter += 1
             sliced_image.save(new_file_name)
 
