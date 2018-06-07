@@ -1,5 +1,5 @@
 # ImageSlicer
-function for slicing images into smaller pieces.
+A small tool for slicing images into smaller pieces.
 
 Example
 ---
