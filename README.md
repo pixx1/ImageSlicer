@@ -1,6 +1,6 @@
 # ImageSlicer
 A small tool for slicing images into smaller pieces.
- 
+
 Example
 ---
 <img src="example.jpg" width="315" title="original image">  
