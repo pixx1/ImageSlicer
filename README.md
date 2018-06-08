@@ -12,8 +12,8 @@ import ImageSlicer
 ImageSlicer.bysize("example.jpg", 2000, 2000, output_folder="slice_image", keep_end_sections=True)
 ```````
 
-<img src="slice_image/0001_example.jpg" width="200" height="200"> <img src="slice_image/0002_example.jpg" width="115" height="200">  
-<img src="slice_image/0003_example.jpg" width="200" height="37"> <img src="slice_image/0004_example.jpg" width="115" height="37">  
+<img src="sliced_by_size/0001_example.jpg" width="200" height="200"> <img src="sliced_by_size/0002_example.jpg" width="115" height="200">  
+<img src="sliced_by_size/0003_example.jpg" width="200" height="37"> <img src="sliced_by_size/0004_example.jpg" width="115" height="37">  
 
 #### Function args for "bysize"
 Function for slicing images by size
@@ -22,6 +22,9 @@ Function for slicing images by size
 3. height of the new images  
 4. output path (optional)  
 5. If you want to keep the end section, which are normally smaller (optional)  
+
+<img src="sliced_by_size/0001_example.jpg" width="200" height="200"> <img src="sliced_by_size/0002_example.jpg" width="115" height="200">  
+<img src="sliced_by_size/0003_example.jpg" width="200" height="37"> <img src="sliced_by_size/0004_example.jpg" width="115" height="37">  
 
 #### Function args for "bynumber"
 Function to slice images by number of parts you want to have
