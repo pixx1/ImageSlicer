@@ -10,10 +10,11 @@ from typing import List, Dict
 import ntpath
 
 
-def bysize(image_path: str, width_new_image: int,
+def bysize(image_path: str,
+           width_new_image: int,
            height_new_image: int,
-           output_folder: str ="sliced/",
-           keep_end_sections: bool =True) -> None:
+           output_folder: str="sliced_by_size/",
+           keep_end_sections: bool=True) -> None:
     """
     function for slicing images into smaller pieces.
     :param image_path: path to image file
@@ -129,3 +130,35 @@ def bysize(image_path: str, width_new_image: int,
         list_of_dicts_with_boxes = __create_list_of_boxes(x_coordinates, y_coordinates)
 
         __crop_image(list_of_dicts_with_boxes, output_folder)
+
+
+def bynumber(image_path: str,
+             width: int,
+             height: int,
+             output_folder="sliced_by_number/",
+             keep_end_sections: bool=True) -> None:
+
+    def __input_validation(input_value):
+
+        if input_value <= 0:
+            print("Input below zero. Exit")
+            exit()
+
+    def __box_size(image_size, box_size):
+        side = round(image_size / box_size)
+        return side
+
+    if not os.path.isfile(image_path):
+        print("Input is not a file. Exit")
+        exit()
+
+    __input_validation(width)
+    __input_validation(height)
+
+    with Image.open(image_path) as im:
+        width_of_the_image, height_of_the_image = im.size
+
+        width_for_splitting = __box_size(width_of_the_image, width)
+        height_for_splitting = __box_size(height_of_the_image, height)
+
+        bysize(image_path, width_for_splitting, height_for_splitting, output_folder, keep_end_sections)
