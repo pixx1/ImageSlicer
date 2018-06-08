@@ -13,7 +13,7 @@ import ntpath
 def bysize(image_path: str,
            width_new_image: int,
            height_new_image: int,
-           output_folder: str="sliced/",
+           output_folder: str="sliced_by_size/",
            keep_end_sections: bool=True) -> None:
     """
     function for slicing images into smaller pieces.
@@ -135,7 +135,8 @@ def bysize(image_path: str,
 def bynumber(image_path: str,
              width: int,
              height: int,
-             output_folder="sliced/", keep_end_sections: bool=True):
+             output_folder="sliced_by_number/",
+             keep_end_sections: bool=True) -> None:
 
     def __input_validation(input_value):
 
