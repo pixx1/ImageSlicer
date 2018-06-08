@@ -5,7 +5,7 @@ Example
 ---
 <img src="example.jpg" width="315" title="original image">  
 
-
+ 
 #### Function "bysize"
 
 [main.py](main.py)  
