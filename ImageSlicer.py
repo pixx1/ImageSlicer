@@ -129,3 +129,33 @@ def bysize(image_path: str, width_new_image: int,
         list_of_dicts_with_boxes = __create_list_of_boxes(x_coordinates, y_coordinates)
 
         __crop_image(list_of_dicts_with_boxes, output_folder)
+
+
+def bynumber(image_path: str,
+             width: int,
+             height: int,
+             output_folder="sliced/"):
+
+    if not os.path.isfile(image_path):
+        print("Input is not a file. Exit")
+        exit()
+
+    def __input_validation(input_value):
+
+        if input_value <= 0:
+            print("Input below zero. Exit")
+            exit()
+
+    def __box_size(image_size, box_size):
+        side = round(image_size / box_size)
+        print(side)
+        print(side * width)
+
+    __input_validation(width)
+    __input_validation(height)
+
+    with Image.open(image_path) as im:
+        width_of_the_image, height_of_the_image = im.size
+        print(width_of_the_image)
+
+        __box_size(width_of_the_image, width)
