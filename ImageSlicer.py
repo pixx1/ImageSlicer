@@ -16,11 +16,12 @@ def bysize(image_path: str,
            output_folder: str="sliced_by_size/",
            keep_end_sections: bool=True) -> None:
     """
-    function for slicing images into smaller pieces.
+    Slice image by size
+
     :param image_path: path to image file
     :param width_new_image: width of the new images
     :param height_new_image: height of the new images
-    :param output_folder: output path, by default it's the folder sliced....
+    :param output_folder: output path, by default it's the folder "sliced_by_size"....
     :param keep_end_sections: the small end parts could be ignored, if you want, by default you keep them
     :return: None
     """
@@ -137,7 +138,18 @@ def bynumber(image_path: str,
              height: int,
              output_folder="sliced_by_number/",
              keep_end_sections: bool=True) -> None:
+    """
+    Function to slice an image by number of parts you want to have
+    so if the input is 10,10 you will get 100 images
+    (depending if you want wo keep the smaller parts or not).
 
+    :param image_path: path to image file
+    :param width: number of boxes horizontal
+    :param height: number of boxes vertical
+    :param output_folder: output path, by default it's the folder "sliced_by_number"....
+    :param keep_end_sections: the small end parts could be ignored, if you want, by default you keep them
+    :return: None
+    """
     def __input_validation(input_value):
 
         if input_value <= 0:
