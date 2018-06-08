@@ -23,8 +23,8 @@ Function for slicing images by size
 4. output path (optional)  
 5. If you want to keep the end section, which are normally smaller (optional)  
 
-<img src="sliced_by_size/0001_example.jpg" width="200" height="200"> <img src="sliced_by_size/0002_example.jpg" width="115" height="200">  
-<img src="sliced_by_size/0003_example.jpg" width="200" height="37"> <img src="sliced_by_size/0004_example.jpg" width="115" height="37">  
+<img src="sliced_by_number/0001_example.jpg" width="157" height="118"> <img src="sliced_by_number/0002_example.jpg" width="157" height="118">  
+<img src="sliced_by_number/0003_example.jpg" width="157" height="118"> <img src="sliced_by_number/0004_example.jpg" width="157" height="118">  
 
 #### Function args for "bynumber"
 Function to slice images by number of parts you want to have
